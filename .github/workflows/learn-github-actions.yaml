@@ -6,10 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Modified files
-        run: |
-          git fetch origin main:main
-          git diff --name-only --diff-filter=d main~ main
+        run: git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
