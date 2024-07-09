@@ -1,4 +1,4 @@
 print("Hallo")
 
-with open('/path/to/my/file.txt', 'r') as f:
+with open('prova', 'r') as f:
     print(f.read())
