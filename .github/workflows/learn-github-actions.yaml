@@ -15,5 +15,5 @@ jobs:
           python-version: '3.9'
       - name: Modified files
         run: |
-          python script.py
-          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }} |
+          python script.py 
