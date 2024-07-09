@@ -3,15 +3,14 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   get_files:
-    runs: 
-      using: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
       - name: Modified files
