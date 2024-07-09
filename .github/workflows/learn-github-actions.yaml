@@ -19,4 +19,4 @@ jobs:
           cd provaAug
           ls
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }} |
-          python script.py
+          python ../script.py
