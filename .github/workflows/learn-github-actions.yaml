@@ -15,5 +15,8 @@ jobs:
           python-version: '3.9'
       - name: Modified files
         run: |
+          git clone https://github.com/prin-underlandscape/provaAug
+          cd provaAug
+          ls
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }} |
-          python script.py 
+          python script.py
