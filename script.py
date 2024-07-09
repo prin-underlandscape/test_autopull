@@ -10,5 +10,5 @@ for line in sys.stdin:
     print(f'Processing Message from sys.stdin *****{line}*****')
 print("Done")
 
-with open('prova', 'r') as f:
+with open('../prova', 'r') as f:
     print(f.read())
